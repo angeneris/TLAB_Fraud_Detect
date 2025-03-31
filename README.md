@@ -82,7 +82,7 @@ The dataset includes the following features: <br>
 ![alt text](image.png)
 
 
-## Feature Engineering Ideas
+## Feature Engineering 
 
 **Balance Discrepancy:**
 
@@ -115,3 +115,83 @@ Box Plots & Histograms: Examine distributions of transaction amounts and balance
 - **Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
 
 ![alt text](image-1.png)
+
+
+
+
+Fraud Detection Model: Hypothesis, EDA, Preprocessing & Model Building
+
+Project Overview
+
+This project aims to develop a fraud detection model using a dataset of financial transactions. The goal is to analyze fraud patterns, clean and preprocess the data, and build multiple machine learning models to accurately detect fraudulent transactions while minimizing false positives and false negatives.
+
+## 1. Hypothesis Formulation & Exploratory Data Analysis (EDA)
+
+### Hypothesis:
+- Fraudulent transactions show distinct patterns related to amount, balance changes, and transaction type ( e.g large transfers outside of the origin)
+- The destination account balance may behave differently in fraud cases (e.g more frequently across multiple origins)
+- Certain transaction types (e.g., cash-outs, transfers) may be more fraud-prone.
+- Large transactions might be flagged as fraud more frequently, but not all large transactions are fraudulent
+
+### EDA & Initial Insights
+- Box Plots & Log Scale Transformations
+The dataset contains a wide range of transaction amounts, making it necessary to use log transformation for better visualization.
+Outliers are prevalent in legitimate transactions, as expected.
+
+- Feature Correlation
+Variables like OldbalanceDest and NewbalanceDest may contain fraud-specific patterns.
+Fraudulent transactions often involve unexpected balance shifts after a transaction.
+
+## 2. Data Cleaning & Preprocessing
+
+Key Preprocessing Steps
+✅ Categorical variables encoded using One-Hot Encoding
+✅ Dropped redundant features to prevent multicollinearity
+
+### Addressing Class Imbalance
+The dataset has a severe imbalance:
+552,439 legitimate transactions (Class 0)
+1,643 fraud transactions (Class 1)
+The model is at risk of favoring non-fraud predictions, missing actual fraud cases.
+Resampling techniques (Oversampling fraud cases via SMOTE and undersampling the majority class) were applied.
+
+## 3. Model Generation & Evaluation
+
+**Logistic Regression Model (Baseline)***
+✅ Precision (Fraud = 0.93) → The model correctly predicts fraud 93% of the time.
+✅ Recall (Fraud = 0.60) → The model only catches 60% of real fraud cases, meaning 40% of fraud cases are missed.
+✅ F1-score (Fraud = 0.73) → The imbalance affects recall, lowering the F1-score.
+
+🔴 False Negatives (missed fraud cases) = 665 → A major issue.
+🟢 False Positives (legitimate transactions wrongly flagged) = 72 → Relatively low.
+
+**Confusion Matrix (Logistic Regression)**
+
+![alt text](image-2.png)
+
+Goal: Improve fraud detection using a non-linear decision boundary.
+Evaluation Plan:
+Precision, Recall, F1-score comparison with Logistic Regression.
+ROC-AUC Curve to assess model performance.
+
+SVM may not be ideal- runs too slow and can not finish computing in time 
+
+### Planned: Random Forest Model
+- Handles class imbalance well.
+- Can model complex relationships between features.
+- Provides feature importance insights.
+
+### Next Steps:
+- Train a Random Forest model and compare its precision, recall, and F1-score to previous models
+- Evaluate feature importance to identify the most critical fraud indicators
+
+## 4. Conclusion & Next Steps
+
+✅ EDA confirmed key fraud patterns, especially in transaction type and balance shifts.
+✅ Logistic Regression performed well in precision but struggled with recall.
+- SVM model is pending evaluation – expected to improve fraud detection
+- Random Forest will be tested for feature importance & better fraud detection
+
+**Future Work:**
+Optimize threshold tuning to balance precision and recall
+Experimenting with ensemble methods (stacking models for better performance)
