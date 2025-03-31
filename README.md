@@ -94,7 +94,7 @@ Fraudulent transactions often involve unexpected balance shifts after a transact
 
 ## 2. Data Cleaning & Preprocessing
 
-Key Preprocessing Steps
+**Key Preprocessing Steps**<br>
 ✅ Categorical variables encoded using One-Hot Encoding <br>
 ✅ Dropped redundant features to prevent multicollinearity<br>
 
