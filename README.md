@@ -46,8 +46,11 @@ The dataset includes the following features: <br>
 ### Key Indicators of Fraud 
 
 **Transaction Type:**
+
+![alt text](image-5.png)
 - Fraud is mostly found in "TRANSFER" and "CASH_OUT" transactions involving moving money between accounts.
 - Transactions like "DEBIT", "PAYMENT", and "CASH_IN" are most likely not malignant.<br>
+
 
 **Balance Changes:**
 - The sender's (NameOrig) OldBalanceOrg is higher, but the NewBalanceOrg is suspiciously 0, meaning they transferred all their funds out
@@ -118,6 +121,8 @@ Resampling techniques (Oversampling fraud cases via SMOTE and undersampling the 
 
 
 ## Feature Engineering 
+**Use of correlation map to determine most relevant features to predict fraud:**
+![alt text](image-3.png)
 
 **Balance Discrepancy:**
 
