@@ -113,3 +113,5 @@ Box Plots & Histograms: Examine distributions of transaction amounts and balance
 - Evaluate logistic regression, decision trees, random forests <br>
 
 - **Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
+
+![alt text](image-1.png)
