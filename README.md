@@ -4,7 +4,6 @@
 
 This project aims to develop a fraud detection model using a dataset of financial transactions. The goal is to analyze fraud patterns, clean and preprocess the data, and build multiple machine learning models to accurately detect fraudulent transactions while minimizing false positives and false negatives.
 
-<br>
 
 ## Dataset Description
 
@@ -32,9 +31,7 @@ The dataset includes the following features: <br>
  
 **IsFraud:** Indicates whether the transaction was actually fraudulent. <br> 
 
-<br>
-<br>
-
+<
 ## Objectives
 
 **Understand Key Features:** Explore the relationships between transaction details and fraud occurrences to create better fraud detection<br>
@@ -45,10 +42,8 @@ The dataset includes the following features: <br>
 
 **Machine Learning Modeling:** Address class imbalance, train and evaluate models to predict fraud more accurately <br> 
 
-<br>
-<br>
 
-### Key Indicators of Fraud <br>
+### Key Indicators of Fraud 
 
 **Transaction Type:**
 - Fraud is mostly found in "TRANSFER" and "CASH_OUT" transactions involving moving money between accounts.
@@ -75,12 +70,9 @@ The dataset includes the following features: <br>
 
 
 ## **Model Selection**
-- Evaluate logistic regression, decision trees, random forests <br>
+Evaluate logistic regression, decision trees, random forests <br>
 
 - **Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
-
-![alt text](image-1.png)
-
 
 
 ## 1. Hypothesis Formulation & Exploratory Data Analysis (EDA)
@@ -103,17 +95,17 @@ Fraudulent transactions often involve unexpected balance shifts after a transact
 ## 2. Data Cleaning & Preprocessing
 
 Key Preprocessing Steps
-✅ Categorical variables encoded using One-Hot Encoding
-✅ Dropped redundant features to prevent multicollinearity
+✅ Categorical variables encoded using One-Hot Encoding <br>
+✅ Dropped redundant features to prevent multicollinearity<br>
 
 
 
 **Preprocessing:** <br>
-- Handle missing values and data inconsistencies.<br> 
+- Handle missing values and data inconsistencies <br> 
 
-- Use One Hot Encoding to encode categorical variables (e.g., transaction types). <br>
+- Use One Hot Encoding to encode categorical variables (e.g., transaction types) <br>
 
-- Handle Class Imbalance (Fraudulent Cases are minority class)
+- Handle Class Imbalance (Fraudulent Cases are minority class) <br>
 ![alt text](image.png)
 
 
