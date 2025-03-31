@@ -72,6 +72,16 @@ The dataset includes the following features: <br>
 <br>
 <br>
 
+
+**Preprocessing:** <br>
+- Handle missing values and data inconsistencies.<br> 
+
+- Encode categorical variables (e.g., transaction types). <br>
+
+- Handle Class Imbalance (Fraudulent Cases are minority class)
+![alt text](image.png)
+
+
 ## Feature Engineering Ideas
 
 **Balance Discrepancy:**
@@ -79,7 +89,6 @@ The dataset includes the following features: <br>
 - Compute Expected New Balance and compare it to NewBalanceOrg and NewBalanceDest.
 
 - Formula: Expected New Balance = Old Balance - Amount.<br>
-
 
 **Transaction Frequency:**
 
@@ -99,11 +108,8 @@ Box Plots & Histograms: Examine distributions of transaction amounts and balance
 <br>
 ## Model Development
 
-**Preprocessing:** <br>
-- Handle missing values and data inconsistencies.<br> 
 
-- Encode categorical variables (e.g., transaction types). <br>
+## **Model Selection**
+- Evaluate logistic regression, decision trees, random forests <br>
 
-**Model Selection:** Evaluate logistic regression, decision trees, random forests <br>
-
-**Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
+- **Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
