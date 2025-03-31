@@ -5,6 +5,7 @@
 This project focuses on detecting fraudulent transactions using machine learning techniques. The dataset contains various transaction details, including account balances before and after transactions, transaction types, and timestamps. The goal is to identify fraudulent transactions based on patterns in the data.
 
 <br>
+
 ## Dataset Description
 
 The dataset includes the following features: <br>
@@ -36,13 +37,13 @@ The dataset includes the following features: <br>
 
 ## Objectives
 
-Understand Key Features: Explore the relationships between transaction details and fraud occurrences.<br>
+**Understand Key Features:** Explore the relationships between transaction details and fraud occurrences to create better fraud detection<br>
 
-Feature Engineering: Generate new features such as balance discrepancies and transaction frequency. <br>
+**Feature Engineering:** Generate new features such as balance discrepancies and transaction frequency('step') <br>
 
-Data Visualization: Use plots to identify patterns in fraudulent transactions. <br>
+**Data Visualization:** Use plots to identify key relevant features and patterns in fraudulent transactions <br>
 
-Machine Learning Modeling: Train and evaluate models to predict fraud.<br> 
+**Machine Learning Modeling:** Address class imbalance, train and evaluate models to predict fraud more accurately <br> 
 
 <br>
 <br>
@@ -103,6 +104,6 @@ Box Plots & Histograms: Examine distributions of transaction amounts and balance
 
 - Encode categorical variables (e.g., transaction types). <br>
 
-**Model Selection:** Evaluate logistic regression, decision trees, random forests, and gradient boosting models. <br>
+**Model Selection:** Evaluate logistic regression, decision trees, random forests <br>
 
 **Evaluation Metrics:** Precision, recall, F1-score, and AUC-ROC to assess model performance.
