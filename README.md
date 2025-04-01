@@ -2,36 +2,40 @@
 
 ## Project Overview <br>
 
-This project aims to develop a fraud detection model using a dataset of financial transactions. The goal is to analyze fraud patterns, clean and preprocess the data, and build multiple machine learning models to accurately detect fraudulent transactions while minimizing false positives and false negatives.
+### Project Overview  
+
+This project focused on building a fraud detection model using a dataset of financial transactions. The goal was to accurately identify fraudulent activity while minimizing false positives and false negatives. Since fraud cases were rare in this dataset compared to legitimate transactions, it was important to handle the major class imbalance effectively.  
+
+The data was cleaned and preprocessed, and initial modeling was done using a **Logistic Regressor**. While **Support Vector Machine (SVM)** was considered, it was found to be inefficient for this task. The next step involves completing the **Random Forest model**, which appears to be the most suitable approach for detecting fraudulent transactions. By the end of the project, the goal is to have a robust fraud detection system that can reliably flag suspicious transactions for further review better than the current model. 
 
 
 ## Dataset Description
 
 The dataset includes the following features: <br>
 
-**Step:** Represents time in hours since the start of data collection. <br>
+**Step:** Represents time in hours since the start of data collection <br>
 
-**Type:** Type of transaction (e.g., CASH-IN, CASH-OUT, TRANSFER, etc.). <br>
+**Type:** Type of transaction (e.g., CASH-IN, CASH-OUT, TRANSFER, etc.) <br>
 
-**Amount:** Transaction amount. <br>
+**Amount:** Transaction amount <br>
 
-**NameOrig:** The ID of the origin account. <br> 
+**NameOrig:** The ID of the origin account <br> 
 
-**OldBalanceOrg:** Balance of the origin account before the transaction. <br> 
+**OldBalanceOrg:** Balance of the origin account before the transaction <br> 
 
-**NewBalanceOrg:** Balance of the origin account after the transaction. <br> 
+**NewBalanceOrg:** Balance of the origin account after the transaction <br> 
 
-**NameDest** The ID of the destination account. <br> 
+**NameDest** The ID of the destination account <br> 
 
-**OldBalanceDest:** Balance of the destination account before the transaction. <br> 
+**OldBalanceDest:** Balance of the destination account before the transaction <br> 
 
-**NewBalanceDest:** Balance of the destination account after the transaction. <br> 
+**NewBalanceDest:** Balance of the destination account after the transaction <br> 
 
-**IsFlaggedFraud:** A rule-based flag for transactions greater than 200,000. <br> 
+**IsFlaggedFraud:** A rule-based flag for transactions greater than 200,000 <br> 
  
-**IsFraud:** Indicates whether the transaction was actually fraudulent. <br> 
+**IsFraud:** Indicates whether the transaction was actually fraudulent <br> 
 
-<
+
 ## Objectives
 
 **Understand Key Features:** Explore the relationships between transaction details and fraud occurrences to create better fraud detection<br>
@@ -99,7 +103,7 @@ Fraudulent transactions often involve unexpected balance shifts after a transact
 
 **Key Preprocessing Steps**<br>
 ✅ Categorical variables encoded using One-Hot Encoding <br>
-✅ Dropped redundant features to prevent multicollinearity<br>
+✅ Dropped redundant features to streamline model interpretation of relevant features<br>
 
 
 
