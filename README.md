@@ -50,8 +50,7 @@ The dataset includes the following features: <br>
 ### Key Indicators of Fraud 
 
 **Transaction Type:**
-
-![alt text](image-5.png)
+![alt text](image.png)
 - Fraud is mostly found in "TRANSFER" and "CASH_OUT" transactions involving moving money between accounts.
 - Transactions like "DEBIT", "PAYMENT", and "CASH_IN" are most likely not malignant.<br>
 
@@ -113,8 +112,7 @@ Fraudulent transactions often involve unexpected balance shifts after a transact
 - Use One Hot Encoding to encode categorical variables (e.g., transaction types) <br>
 
 - Handle Class Imbalance (Fraudulent Cases are minority class) <br>
-![alt text](image.png)
-
+![alt text](image-1.png)
 
 ### Addressing Class Imbalance
 The dataset has a severe imbalance:
@@ -126,7 +124,7 @@ Resampling techniques (Oversampling fraud cases via SMOTE and undersampling the 
 
 ## Feature Engineering 
 **Use of correlation map to determine most relevant features to predict fraud:**
-![alt text](image-3.png)
+![alt text](image-2.png)
 
 **Balance Discrepancy:**
 
@@ -162,8 +160,7 @@ Box Plots & Histograms: Examine distributions of transaction amounts and balance
 🟢 False Positives (legitimate transactions wrongly flagged) = 72 → Relatively low <br>
 
 **Confusion Matrix (Logistic Regression)**
-
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 Goal: Improve fraud detection using a non-linear decision boundary <br>
 Evaluation Plan:
